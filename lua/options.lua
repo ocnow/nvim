@@ -24,7 +24,13 @@ vim.opt.clipboard='unnamedplus'
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
-vim.cmd('colorscheme industry')
+vim.cmd('colorscheme github_dark')
+
+vim.opt.termguicolors=true
+
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" }) -- For non-current window background
+vim.api.nvim_set_hl(0, "NonText", { bg = "none" })
 
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
